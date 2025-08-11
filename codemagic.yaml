@@ -3,8 +3,8 @@ workflows:
     name: Build Android APK
     max_build_duration: 15
     environment:
-      android:
-        image: latest
+      vars:
+        JAVA_VERSION: 17
     scripts:
       - chmod +x ./gradlew
       - ./gradlew assembleDebug
